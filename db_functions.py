@@ -1,6 +1,6 @@
 import pickle
 filename = "data.pickle"
-
+import hotel
 
 def add_or_update_entity(entity):
     '''
@@ -72,9 +72,18 @@ def get_entities_list_by_property(property, entity, value):
     return required_data
 
 
-# def get_entity_list_by_propertis(entity,**kwargs):
-#     all_entity_data=get_all_certain_entity(entity)
-#     for propery in kwargs.keys():
+def get_entity_list_by_propertis(entity,**kwargs):
+
+    results_list=[]
+    all_entity_data=[x for x in get_all_certain_entity(entity).values()]
+    print(all_entity_data)
+    for item in all_entity_data:
+        for key in kwargs:
+            print(kwargs[key])
+            print(getattr(item,key))
+            if key=="max_rooms":
+
+
 
 
 
@@ -103,11 +112,11 @@ def get_all_certain_entity(entity):
 # ff=get_entity_by_id('MOshe',"Customer")
 # print(ff)
 
-# a={"asf":{1:"asg"}}
-#
+ # id, max_sits, start_place, target_place, flight_duration, flight_date, flight_time):
+
 #
 # a["asf"][3]="33g"
 # print(a["asf"][1])
 # print(a["asf"][3])
-
+# get_entity_list_by_propertis(entity="Hotel",max_rooms="6")
 # print(get_entities_list_by_property("first_name", "Customer", "236"))

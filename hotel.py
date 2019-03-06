@@ -1,6 +1,6 @@
 import utils
 import pickle
-import db_functions as db
+from db_functions import get_entity_by_id
 
 
 class Hotel:
@@ -22,7 +22,7 @@ class Hotel:
         return True
 
     def get_reserved_dates(self):
-        self.reserved_dates = db.get_entity_by_id(self.id,"Hotel").reserved_dates
+        self.reserved_dates = get_entity_by_id(self.id,"Hotel").reserved_dates
 
     def get_all_available_vehicles(self):
         pass

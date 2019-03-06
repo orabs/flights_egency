@@ -3,7 +3,7 @@ import datetime
 import uuid
 from random import randint
 import db_functions as db
-from faker import Faker
+# from faker import Faker
 from flight import Flight
 from hotel import Hotel
 from vehicle import Vehicle
@@ -54,13 +54,13 @@ def generate_vehicle(num):
 
 
 # generate_vehicle(5)
-generate_hotels(5)
+# generate_hotels(5)
 # generate_flights(5)
 
 # print(db.get_all_certain_entity('Flight'))
 # print(db.get_all_certain_entity('Hotel').keys())
 # print("adgasdashah")
-print(len(db.get_all_certain_entity('Hotel')))
+# print(len(db.get_all_certain_entity('Hotel')))
 
 # print(db.get_all_certain_entity('Vehicle'))
 
